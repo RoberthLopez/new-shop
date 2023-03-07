@@ -14,14 +14,13 @@ import Checkout from "./pages/Checkout";
 import MyAccount from "./pages/MyAccount";
 import useInitialState from "./hooks/useInitialState";
 import AppContext from "./context/AppContext";
-import { HashRouter } from "react-router-dom";
 
 const App = () => {
   const initialState = useInitialState();
 
   return (
     <AppContext.Provider value={initialState}>
-      <BrowserRouter>
+      <BrowserRouter basename="/new-shop">
         <Layout>
           <Routes>
             <Route exact path="/" element={<Home />} />
