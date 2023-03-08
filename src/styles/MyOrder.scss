@@ -12,16 +12,25 @@
   border-radius: 6px;
   border: 1px solid var(--very-light-pink);
 }
+.my-order-content {
+  overflow-y: scroll;
+  height: 200px;
+  scroll-behavior: smooth;
+}
 .title-container {
   display: flex;
 }
 .title-container img {
   transform: rotate(180deg);
   margin-right: 14px;
+  cursor: pointer;
 }
 .title {
   font-size: var(--lg);
   font-weight: bold;
+}
+.order-container {
+  padding-top: 20px;
 }
 .order {
   display: grid;

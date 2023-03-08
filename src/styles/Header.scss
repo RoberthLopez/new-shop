@@ -5,11 +5,15 @@ nav {
   justify-content: space-between;
   padding: 0 24px;
   border-bottom: 1px solid var(--very-light-pink);
+  position: sticky;
+  top: 0;
+  background-color: white;
 }
-.menu {
+.nav-menu {
   display: none;
 }
 .nav-logo {
+  display: flex;
   width: 100px;
 }
 .navbar-left ul,
@@ -44,9 +48,11 @@ nav {
   color: var(--very-light-pink);
   font-size: var(--sm);
   margin-right: 12px;
+  cursor: pointer;
 }
 .navbar-shopping-cart {
   position: relative;
+  cursor: pointer;
 }
 .navbar-shopping-cart div {
   width: 16px;
@@ -63,7 +69,7 @@ nav {
   align-items: center;
 }
 @media (max-width: 640px) {
-  .menu {
+  .nav-menu {
     display: block;
   }
   .navbar-left ul {

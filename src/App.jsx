@@ -20,23 +20,19 @@ const App = () => {
 
   return (
     <AppContext.Provider value={initialState}>
-      <BrowserRouter basename="/new-shop">
+      <BrowserRouter>
         <Layout>
           <Routes>
-            <Route exact path="/" element={<Home />} />
-            <Route exact path="/login" element={<Login />} />
-            <Route
-              exact
-              path="/password-recovery"
-              element={<PasswordRecovery />}
-            />
-            <Route exact path="/send-email" element={<SendEmail />} />
-            <Route exact path="/new-password" element={<NewPassword />} />
-            <Route exact path="/my-account" element={<MyAccount />} />
-            <Route exact path="/register" element={<CreateAccount />} />
-            <Route exact path="/checkout" element={<Checkout />} />
-            <Route exact path="/orders" element={<Orders />} />
-            <Route exact path="*" element={<NotFound />} />
+            <Route path="/" element={<Home />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/password-recovery" element={<PasswordRecovery />} />
+            <Route path="/send-email" element={<SendEmail />} />
+            <Route path="/new-password" element={<NewPassword />} />
+            <Route path="/my-account" element={<MyAccount />} />
+            <Route path="/register" element={<CreateAccount />} />
+            <Route path="/checkout" element={<Checkout />} />
+            <Route path="/orders" element={<Orders />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </Layout>
       </BrowserRouter>

@@ -6,12 +6,14 @@ const initialState = {
 
 const useInitialState = () => {
     const [state, setState] = useState(initialState);
+    // const [isOnCart, setIsOnCart] = useState(false)
 
     const addToCart = (payload) => {
         setState({
             ...state,
             cart: [...state.cart, payload],
         })
+
     }
     const removeFromCart = (payload) => {
         setState({
@@ -19,11 +21,15 @@ const useInitialState = () => {
             cart: state.cart.filter(items => items.id !== payload.id),
         })
     }
+    const isOnCart = (payload) => {
+       return state.cart.includes(payload)
+    }
 
     return {
         state,
         addToCart,
-        removeFromCart
+        removeFromCart,
+        isOnCart
     }
 }
 

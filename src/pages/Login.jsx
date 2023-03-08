@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import "../styles/Login.scss";
+import { Link } from "react-router-dom";
 
 const Login = () => {
   const form = useRef(null);
@@ -11,7 +12,6 @@ const Login = () => {
       username: formData.get("email"),
       password: formData.get("password"),
     };
-    console.log(data);
   };
 
   return (
@@ -25,7 +25,7 @@ const Login = () => {
           <input
             type="text"
             name="email"
-            placeholder="platzi@example.cm"
+            placeholder="email@example.com"
             className="input input-email"
           />
           <label htmlFor="password" className="label">
@@ -42,11 +42,13 @@ const Login = () => {
             onClick={handleSubmit}
             className="primary-button login-button"
           >
-            {" "}
+            Login
           </button>
-          <a href="/">Forgot my password</a>
+          <Link to="/password-recovery">Forgot my password</Link>
         </form>
-        <button className="secondary-button signup-button">Sign up</button>
+        <Link to="/register">
+          <button className="secondary-button signup-button">Sign up</button>
+        </Link>
       </div>
     </div>
   );
